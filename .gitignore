@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/CSharpOdataMicroservice/.vs/CSharpOdataMicroservice/v16
+/CSharpOdataMicroservice/CSharpOdataMicroservice/obj
