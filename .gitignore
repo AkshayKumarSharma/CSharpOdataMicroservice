@@ -5,3 +5,14 @@
 /.vs
 /CSharpOdataMicroservice/.vs/CSharpOdataMicroservice/v16
 /CSharpOdataMicroservice/CSharpOdataMicroservice/obj
+/CSharpOdataMicroservice/.vs/CSharpOdataMicroservice/config
+/CSharpOdataMicroservice/.vs/CSharpOdataMicroservice/DesignTimeBuild
+/CSharpOdataMicroservice/CSharpOdataMicroservice/bin/Debug/netcoreapp3.1/CSharpOdataMicroservice.dll
+/CSharpOdataMicroservice/CSharpOdataMicroservice/bin/Debug/netcoreapp3.1/CSharpOdataMicroservice.exe
+/CSharpOdataMicroservice/CSharpOdataMicroservice/bin/Debug/netcoreapp3.1/CSharpOdataMicroservice.pdb
+/CSharpOdataMicroservice/CSharpOdataMicroservice/bin/Debug/netcoreapp3.1/Serilog.Sinks.File.dll
+/CSharpOdataMicroservice/CSharpOdataMicroservice/bin/Debug/netcoreapp3.1/Serilog.Sinks.Console.dll
+/CSharpOdataMicroservice/CSharpOdataMicroservice/bin/Debug/netcoreapp3.1/Serilog.Extensions.Logging.dll
+/CSharpOdataMicroservice/CSharpOdataMicroservice/bin/Debug/netcoreapp3.1/Serilog.Extensions.Hosting.dll
+/CSharpOdataMicroservice/CSharpOdataMicroservice/bin/Debug/netcoreapp3.1/Serilog.dll
+/CSharpOdataMicroservice/CSharpOdataMicroservice/bin/Debug/netcoreapp3.1

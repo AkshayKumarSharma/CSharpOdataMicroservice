@@ -1,15 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Serilog;
+using Serilog.Events;
 
 namespace CSharpOdataMicroservice
 {
@@ -25,12 +20,16 @@ namespace CSharpOdataMicroservice
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Log.Information("In ConfigureServices");
             services.AddControllers();
+            services.AddSingleton(BuildLogger());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            Log.Information("In Configure");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -46,6 +45,19 @@ namespace CSharpOdataMicroservice
             {
                 endpoints.MapControllers();
             });
+        }
+
+        public static ILogger BuildLogger()
+        {
+            Log.Logger = new LoggerConfiguration()
+                      .MinimumLevel.Debug()
+                      .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+                      .Enrich.FromLogContext()
+                      .WriteTo.Console()
+                      .WriteTo.File("C:\\test\\abc.txt")
+                      .CreateLogger();
+
+            return Log.Logger;
         }
     }
 }
